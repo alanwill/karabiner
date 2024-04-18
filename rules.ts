@@ -62,8 +62,6 @@ const rules: KarabinerRules[] = [
     // b = "B"rowse
     b: {
       t: open("https://twitter.com"),
-      // Quarterly "P"lan
-      p: open("https://qrtr.ly/plan"),
       y: open("https://news.ycombinator.com"),
       f: open("https://facebook.com"),
       r: open("https://reddit.com"),
@@ -71,29 +69,23 @@ const rules: KarabinerRules[] = [
     // o = "Open" applications
     o: {
       1: app("1Password"),
-      g: app("Google Chrome"),
+      w: app("Arc"),
       c: app("Notion Calendar"),
       v: app("Visual Studio Code"),
       d: app("Discord"),
       s: app("Slack"),
       e: app("Superhuman"),
       n: app("Notion"),
-      t: app("Warp"),
+      t: app("iTerm"),
       // Open todo list managed via *H*ypersonic
       h: open(
         "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
       ),
       z: app("zoom.us"),
-      // "M"essages
-      m: app("Texts"),
+      m: app("Messages"),
       f: app("Finder"),
-      r: app("Texts"),
-      // "i"Message
-      i: app("Texts"),
       p: app("Spotify"),
       a: app("iA Presenter"),
-      // "W"hatsApp has been replaced by Texts
-      w: open("Texts"),
       l: open(
         "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
       ),
@@ -110,65 +102,123 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      y: rectangle("previous-display"),
-      o: rectangle("next-display"),
-      k: rectangle("top-half"),
-      j: rectangle("bottom-half"),
-      h: rectangle("left-half"),
-      l: rectangle("right-half"),
-      f: rectangle("maximize"),
-      u: {
-        description: "Window: Previous Tab",
+      a: {
+        description: "Almost Maximize Window",
         to: [
           {
-            key_code: "tab",
-            modifiers: ["right_control", "right_shift"],
+            shell_command: "open -g raycast://extensions/raycast/window-management/almost-maximize",
           },
         ],
       },
-      i: {
-        description: "Window: Next Tab",
+      p: {
+        description: "Move window to previous display",
         to: [
           {
-            key_code: "tab",
-            modifiers: ["right_control"],
+            shell_command: "open -g raycast://extensions/raycast/window-management/previous-display",
           },
         ],
       },
       n: {
-        description: "Window: Next Window",
+        description: "Move window to next display",
         to: [
           {
-            key_code: "grave_accent_and_tilde",
-            modifiers: ["right_command"],
+            shell_command: "open -g raycast://extensions/raycast/window-management/next-display",
           },
         ],
       },
-      b: {
-        description: "Window: Back",
+      k: {
+        description: "Move window to top half of screen",
         to: [
           {
-            key_code: "open_bracket",
-            modifiers: ["right_command"],
+            shell_command: "open -g raycast://extensions/raycast/window-management/top-half",
           },
         ],
       },
-      // Note: No literal connection. Both f and n are already taken.
+      j: {
+        description: "Move window to bottom half of screen",
+        to: [
+          {
+            shell_command: "open -g raycast://extensions/raycast/window-management/bottom-half",
+          },
+        ],
+      },
+      h: {
+        description: "Move window to left half of screen",
+        to: [
+          {
+            shell_command: "open -g raycast://extensions/raycast/window-management/left-half",
+          },
+        ],
+      },
+      l: {
+        description: "Move window to right half of screen",
+        to: [
+          {
+            shell_command: "open -g raycast://extensions/raycast/window-management/right-half",
+          },
+        ],
+      },
       m: {
-        description: "Window: Forward",
+        description: "Maximize window",
         to: [
           {
-            key_code: "close_bracket",
-            modifiers: ["right_command"],
+            shell_command: "open -g raycast://extensions/raycast/window-management/maximize",
           },
         ],
       },
-      d: {
-        description: "Window: Next display",
+      equal_sign: {
+        description: "Larger window",
         to: [
           {
-            key_code: "right_arrow",
-            modifiers: ["right_control", "right_option", "right_command"],
+            shell_command: "open -g raycast://extensions/raycast/window-management/make-larger",
+          },
+        ],
+      },
+      hyphen: {
+        description: "Smaller window",
+        to: [
+          {
+            shell_command: "open -g raycast://extensions/raycast/window-management/make-smaller",
+          },
+        ],
+      },
+      left_arrow: {
+        description: "Move window left",
+        to: [
+          {
+            shell_command: "open -g raycast://extensions/raycast/window-management/move-left",
+          },
+        ],
+      },
+      right_arrow: {
+        description: "Move window left",
+        to: [
+          {
+            shell_command: "open -g raycast://extensions/raycast/window-management/move-right",
+          },
+        ],
+      },
+      up_arrow: {
+        description: "Move window up",
+        to: [
+          {
+            shell_command: "open -g raycast://extensions/raycast/window-management/move-up",
+          },
+        ],
+      },
+      down_arrow: {
+        description: "Move window down",
+        to: [
+          {
+            shell_command: "open -g raycast://extensions/raycast/window-management/move-down",
+          },
+        ],
+      },
+      r: {
+        description: "Resonable size",
+        to: [
+          {
+            shell_command: "open -g raycast://extensions/raycast/window-management/reasonable-size",
           },
         ],
       },

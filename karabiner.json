@@ -174,30 +174,6 @@
               {
                 "to": [
                   {
-                    "shell_command": "open https://qrtr.ly/plan"
-                  }
-                ],
-                "description": "Open https://qrtr.ly/plan",
-                "type": "basic",
-                "from": {
-                  "key_code": "p",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_b",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
                     "shell_command": "open https://news.ycombinator.com"
                   }
                 ],
@@ -369,13 +345,13 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Google Chrome.app'"
+                    "shell_command": "open -a 'Arc.app'"
                   }
                 ],
-                "description": "Open -a 'Google Chrome.app'",
+                "description": "Open -a 'Arc.app'",
                 "type": "basic",
                 "from": {
-                  "key_code": "g",
+                  "key_code": "w",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -537,10 +513,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Warp.app'"
+                    "shell_command": "open -a 'iTerm.app'"
                   }
                 ],
-                "description": "Open -a 'Warp.app'",
+                "description": "Open -a 'iTerm.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "t",
@@ -609,10 +585,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Texts.app'"
+                    "shell_command": "open -a 'Messages.app'"
                   }
                 ],
-                "description": "Open -a 'Texts.app'",
+                "description": "Open -a 'Messages.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "m",
@@ -640,54 +616,6 @@
                 "type": "basic",
                 "from": {
                   "key_code": "f",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Texts.app'"
-                  }
-                ],
-                "description": "Open -a 'Texts.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "r",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Texts.app'"
-                  }
-                ],
-                "description": "Open -a 'Texts.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "i",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -736,30 +664,6 @@
                 "type": "basic",
                 "from": {
                   "key_code": "a",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open Texts"
-                  }
-                ],
-                "description": "Open Texts",
-                "type": "basic",
-                "from": {
-                  "key_code": "w",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -901,15 +805,15 @@
                 ]
               },
               {
+                "description": "Almost Maximize Window",
                 "to": [
                   {
-                    "shell_command": "open -g rectangle://execute-action?name=previous-display"
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/almost-maximize"
                   }
                 ],
-                "description": "Window: previous-display",
                 "type": "basic",
                 "from": {
-                  "key_code": "y",
+                  "key_code": "a",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -925,15 +829,15 @@
                 ]
               },
               {
+                "description": "Move window to previous display",
                 "to": [
                   {
-                    "shell_command": "open -g rectangle://execute-action?name=next-display"
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/previous-display"
                   }
                 ],
-                "description": "Window: next-display",
                 "type": "basic",
                 "from": {
-                  "key_code": "o",
+                  "key_code": "p",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -949,188 +853,10 @@
                 ]
               },
               {
+                "description": "Move window to next display",
                 "to": [
                   {
-                    "shell_command": "open -g rectangle://execute-action?name=top-half"
-                  }
-                ],
-                "description": "Window: top-half",
-                "type": "basic",
-                "from": {
-                  "key_code": "k",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_w",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -g rectangle://execute-action?name=bottom-half"
-                  }
-                ],
-                "description": "Window: bottom-half",
-                "type": "basic",
-                "from": {
-                  "key_code": "j",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_w",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -g rectangle://execute-action?name=left-half"
-                  }
-                ],
-                "description": "Window: left-half",
-                "type": "basic",
-                "from": {
-                  "key_code": "h",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_w",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -g rectangle://execute-action?name=right-half"
-                  }
-                ],
-                "description": "Window: right-half",
-                "type": "basic",
-                "from": {
-                  "key_code": "l",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_w",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -g rectangle://execute-action?name=maximize"
-                  }
-                ],
-                "description": "Window: maximize",
-                "type": "basic",
-                "from": {
-                  "key_code": "f",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_w",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "description": "Window: Previous Tab",
-                "to": [
-                  {
-                    "key_code": "tab",
-                    "modifiers": [
-                      "right_control",
-                      "right_shift"
-                    ]
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "u",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_w",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "description": "Window: Next Tab",
-                "to": [
-                  {
-                    "key_code": "tab",
-                    "modifiers": [
-                      "right_control"
-                    ]
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "i",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_w",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "description": "Window: Next Window",
-                "to": [
-                  {
-                    "key_code": "grave_accent_and_tilde",
-                    "modifiers": [
-                      "right_command"
-                    ]
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/next-display"
                   }
                 ],
                 "type": "basic",
@@ -1151,18 +877,15 @@
                 ]
               },
               {
-                "description": "Window: Back",
+                "description": "Move window to top half of screen",
                 "to": [
                   {
-                    "key_code": "open_bracket",
-                    "modifiers": [
-                      "right_command"
-                    ]
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/top-half"
                   }
                 ],
                 "type": "basic",
                 "from": {
-                  "key_code": "b",
+                  "key_code": "k",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -1178,13 +901,82 @@
                 ]
               },
               {
-                "description": "Window: Forward",
+                "description": "Move window to bottom half of screen",
                 "to": [
                   {
-                    "key_code": "close_bracket",
-                    "modifiers": [
-                      "right_command"
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/bottom-half"
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "optional": [
+                      "any"
                     ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "description": "Move window to left half of screen",
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/left-half"
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "description": "Move window to right half of screen",
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/right-half"
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "description": "Maximize window",
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/maximize"
                   }
                 ],
                 "type": "basic",
@@ -1205,20 +997,159 @@
                 ]
               },
               {
-                "description": "Window: Next display",
+                "description": "Larger window",
                 "to": [
                   {
-                    "key_code": "right_arrow",
-                    "modifiers": [
-                      "right_control",
-                      "right_option",
-                      "right_command"
-                    ]
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/make-larger"
                   }
                 ],
                 "type": "basic",
                 "from": {
-                  "key_code": "d",
+                  "key_code": "equal_sign",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "description": "Smaller window",
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/make-smaller"
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "hyphen",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "description": "Move window left",
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/move-left"
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "left_arrow",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "description": "Move window left",
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/move-right"
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "right_arrow",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "description": "Move window up",
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/move-up"
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "up_arrow",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "description": "Move window down",
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/move-down"
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "down_arrow",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "description": "Resonable size",
+                "to": [
+                  {
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/reasonable-size"
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "r",
                   "modifiers": {
                     "optional": [
                       "any"
